@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. Ankur Madan's Professional Journey</title>
+    
+    <!-- Using Tailwind CSS for a utility-first styling approach -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importing a professional and modern font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base styles for a dark theme and smooth scrolling */
+        :root {
+            --primary-color: #6366f1; /* Indigo 500 */
+            --secondary-color: #f472b6; /* Pink 400 */
+            --accent-color: #4ac5f1; /* Custom light blue */
+            --bg-color-dark: #0d1117;
+            --text-color-light: #e2e8f0;
+            --card-bg-color: rgba(13, 17, 23, 0.7);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-light);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Full viewport sections for single-page scrolling */
+        .section {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        /* Main content card with a frosted glass effect */
+        .content-card {
+            background-color: var(--card-bg-color);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            padding: clamp(2rem, 5vw, 4rem);
+            max-width: 1100px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        h1, h2, h3 { font-weight: 700; }
+
+        /* Navigation button styling - removed as per request, but keeping the CSS in case you want to add them back later */
+        .nav-button {
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .nav-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        .nav-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .nav-button:hover::before {
+            left: 100%;
+        }
+
+        /* Card with a subtle hover lift effect */
+        .animated-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .animated-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+        .animated-card h3 {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+            line-height: 1.2;
+            transition: color 0.3s;
+        }
+        .animated-card:hover h3 { color: var(--text-color-light); }
+
+        /* Donut chart component styling */
+        .donut-chart-container {
+            position: relative;
+            width: clamp(80px, 15vw, 120px);
+            height: clamp(80px, 15vw, 120px);
+            margin: 0.5rem;
+        }
+        .donut-chart-svg {
+            transform: rotate(-90deg);
+            width: 100%;
+            height: 100%;
+        }
+        .donut-chart-circle-bg {
+            fill: none;
+            stroke: #4a5568;
+            stroke-width: 3.8;
+        }
+        .donut-chart-circle-fill {
+            fill: none;
+            stroke-width: 2.8;
+            stroke-linecap: round;
+        }
+        .donut-chart-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+            font-weight: bold;
+            color: var(--text-color-light);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scroll-container">
+        
+        <!-- Section 1: Introduction -->
+        <section id="section-1" class="section bg-cover bg-center" style="background-image: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 0.8)), url('https://placehold.co/1920x1080/1a202c/ffffff?text=Professional+Journey');">
+            <div class="content-card text-white">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-600">Prof. Ankur Madan</h1>
+                <h2 class="text-2xl md:text-4xl font-semibold mb-2">Assistant Professor, Data Analytics</h2>
+                <p class="text-lg md:text-2xl mt-4 text-gray-300">GL Bajaj Institute of Management and Research</p>
+                <p class="text-md md:text-xl text-gray-400">Academic Year 2024-25</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Teaching Process & Student Feedback -->
+        <section id="section-2" class="section bg-cover bg-center" style="background-image: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 0.8)), url('https://placehold.co/1920x1080/2d3748/ffffff?text=Teaching+Excellence');">
+            <div class="content-card text-white">
+                <h2 class="text-4xl font-bold mb-4">Driving Student Success: Feedback & Engagement</h2>
+                <p class="text-lg text-gray-300 mb-8">My commitment to student success is reflected in strong feedback across all my courses, showcasing high engagement and learning outcomes.</p>
+                <!-- Container for all chart groups, with vertical spacing -->
+                <div id="charts-container" class="flex flex-col gap-10 items-center">
+                    
+                    <!-- Excel Charts Group -->
+                    <div class="flex flex-col items-center w-full">
+                        <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-400">Excel</h3>
+                        <div id="excel-charts" class="flex flex-wrap justify-center gap-4">
+                            <!-- Excel charts will be dynamically added here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Information Systems Charts Group -->
+                    <div class="flex flex-col items-center w-full">
+                        <h3 class="text-xl md:text-2xl font-bold mb-4 text-pink-400">Information Systems</h3>
+                        <div id="is-charts" class="flex flex-wrap justify-center gap-4">
+                            <!-- Information Systems charts will be dynamically added here -->
+                        </div>
+                    </div>
+
+                    <!-- Python Tools Charts Group -->
+                    <div class="flex flex-col items-center w-full">
+                        <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-400">Python Tools</h3>
+                        <div id="python-charts" class="flex flex-wrap justify-center gap-4">
+                            <!-- Python charts will be dynamically added here -->
+                        </div>
+                    </div>
+
+                    <!-- Power BI Charts Group -->
+                    <div class="flex flex-col items-center w-full">
+                        <h3 class="text-xl md:text-2xl font-bold mb-4 text-purple-400">Power BI</h3>
+                        <div id="powerbi-charts" class="flex flex-wrap justify-center gap-4">
+                            <!-- Power BI charts will be dynamically added here -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Strategic Contributions & Corporate Partnerships -->
+        <section id="section-3" class="section bg-cover bg-center" style="background-image: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 0.8)), url('https://placehold.co/1920x1080/2d3748/ffffff?text=Contributions');">
+            <div class="content-card text-white">
+                <h2 class="text-4xl font-bold mb-4">Strategic Contributions & Corporate Partnerships</h2>
+                <p class="text-lg text-gray-300 mb-8">Beyond the classroom, I've actively contributed to our department's growth and built crucial bridges with the corporate world.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="animated-card card bg-gray-800 rounded-xl p-6 transition-all duration-300 border border-gray-700 hover:border-blue-500 text-left items-start">
+                        <h3 class="text-2xl font-semibold mb-2 bg-gradient-to-r from-blue-400 to-blue-600">Expert Talk Sessions</h3>
+                        <p class="text-gray-400">Successfully managed and hosted sessions with industry influencers, including Ms. Smriti Gupta from Barclays UK.</p>
+                    </div>
+                    <div class="animated-card card bg-gray-800 rounded-xl p-6 transition-all duration-300 border border-gray-700 hover:border-pink-500 text-left items-start">
+                        <h3 class="text-2xl font-semibold mb-2 bg-gradient-to-r from-pink-400 to-pink-600">Corporate & Alumni Connect</h3>
+                        <p class="text-gray-400">Coordinated impactful alumni talks on AI and leveraged digital tools to build corporate networks for students.</p>
+                    </div>
+                    <div class="animated-card card bg-gray-800 rounded-xl p-6 transition-all duration-300 border border-gray-700 hover:border-purple-500 text-left items-start">
+                        <h3 class="text-2xl font-semibold mb-2 bg-gradient-to-r from-purple-400 to-purple-600">Advanced Certifications</h3>
+                        <p class="text-gray-400">Facilitated a value-added course on Advanced MS Office, enhancing student practical skills for the modern workplace.</p>
+                    </div>
+                </div>
+
+                <h2 class="text-4xl font-bold mt-12 mb-4">Initiatives & Event Leadership</h2>
+                <p class="text-lg text-gray-300 mb-8">My proactive engagement in extracurricular and institutional activities has driven innovation and streamlined operations.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="animated-card card bg-gray-800 rounded-xl p-6 transition-all duration-300 border border-gray-700 hover:border-green-500 text-left items-start">
+                        <h3 class="text-2xl font-semibold mb-2 bg-gradient-to-r from-green-400 to-green-600">IT Club Management</h3>
+                        <p class="text-gray-400">Effectively led the IT Club, empowering students to plan and execute a range of successful tech-focused events.</p>
+                    </div>
+                    <div class="animated-card card bg-gray-800 rounded-xl p-6 transition-all duration-300 border border-gray-700 hover:border-yellow-500 text-left items-start">
+                        <h3 class="text-2xl font-semibold mb-2 bg-gradient-to-r from-yellow-400 to-yellow-600">Major Event Coordination</h3>
+                        <p class="text-gray-400">Played a pivotal role in organizing key institutional events, including Convocation and a three-day sports tournament.</p>
+                    </div>
+                    <div class="animated-card card bg-gray-800 rounded-xl p-6 transition-all duration-300 border border-gray-700 hover:border-red-500 text-left items-start">
+                        <h3 class="text-2xl font-semibold mb-2 bg-gradient-to-r from-red-400 to-red-600">Process & Support</h3>
+                        <p class="text-gray-400">Streamlined post-event processes by documenting over 15 detailed event closure reports for institutional records.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Certifications & Professional Development -->
+        <section id="section-4" class="section bg-cover bg-center" style="background-image: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 0.8)), url('https://placehold.co/1920x1080/0d1117/ffffff?text=Certifications');">
+            <div class="content-card text-white">
+                <h2 class="text-4xl font-bold mb-4">Certifications & Professional Development</h2>
+                <p class="text-lg text-gray-300 mb-8">My dedication to continuous learning is evidenced by key certifications and participation in cutting-edge industry forums.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+                    <div class="animated-card card bg-gray-800 rounded-xl p-6 transition-all duration-300 border border-gray-700 hover:border-purple-500 text-left items-start">
+                        <h3 class="text-2xl font-semibold mb-2 bg-gradient-to-r from-purple-400 to-purple-600">Key Certifications</h3>
+                        <ul class="text-gray-400 list-disc list-inside">
+                            <li>SkillUp-Smackdown: Unleash the Potential | Case Study - Birla Institute of Technology, Mesra, Ranchi</li>
+                            <li>Project Management Professional Certification (Infosys Springboard)</li>
+                            <li>McKinsey’s Forward Program</li>
+                            <li>MDP - Prompt Engineering</li>
+                            <li>FDP on Research Skill Series III</li>
+                        </ul>
+                    </div>
+                    <div class="animated-card card bg-gray-800 rounded-xl p-6 transition-all duration-300 border border-gray-700 hover:border-green-500 text-left items-start">
+                        <h3 class="text-2xl font-semibold mb-2 bg-gradient-to-r from-green-400 to-green-600">Conferences & Workshops</h3>
+                        <ul class="text-gray-400 list-disc list-inside">
+                            <li>Empower your workforce with Microsoft 365 Copilot Use Cases</li>
+                            <li>Qonfx - Future of Testing conference participation.</li>
+                            <li>Great India AI Summit - Upgrad and Salesforce.</li>
+                            <li>AI in Product Management Workshop.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: My Professional Growth: A Three-Phase Journey (Horizontal Timeline) -->
+        <section id="section-5" class="section bg-cover bg-center" style="background-image: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 0.8)), url('https://placehold.co/1920x1080/0d1117/ffffff?text=Professional+Growth');">
+            <div class="content-card text-white">
+                <h2 class="text-4xl font-bold mb-8">My Professional Growth: A Three-Phase Journey</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Phase 1 -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="timeline-header mb-4">
+                            <div class="text-5xl font-bold text-blue-400 mb-2">1</div>
+                            <h3 class="text-xl font-semibold text-blue-400">Phase I: Foundation</h3>
+                        </div>
+                        <div class="animated-card card bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500 text-left items-start">
+                            <p class="text-gray-400">Focused on building a strong educational foundation for students through corporate datasets.</p>
+                        </div>
+                    </div>
+                    <!-- Phase 2 -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="timeline-header mb-4">
+                            <div class="text-5xl font-bold text-pink-400 mb-2">2</div>
+                            <h3 class="text-xl font-semibold text-pink-400">Phase II: Upskilling</h3>
+                        </div>
+                        <div class="animated-card card bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-pink-500 text-left items-start">
+                            <p class="text-gray-400">Pursued AI certifications and guided students in using digital tools to connect with recruiters.</p>
+                        </div>
+                    </div>
+                    <!-- Phase 3 -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="timeline-header mb-4">
+                            <div class="text-5xl font-bold text-purple-400 mb-2">3</div>
+                            <h3 class="text-xl font-semibold text-purple-400">Phase III: Networking</h3>
+                        </div>
+                        <div class="animated-card card bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-purple-500 text-left items-start">
+                            <p class="text-gray-400">Actively built professional and international connections to plan for market research projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Strategic Goals for the Next Academic Year -->
+        <section id="section-6" class="section bg-cover bg-center" style="background-image: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 0.8)), url('https://placehold.co/1920x1080/2d3748/ffffff?text=Goals');">
+            <div class="content-card text-white">
+                <h2 class="text-4xl font-bold mb-4">Strategic Goals for the Next Academic Year</h2>
+                <p class="text-lg text-gray-300 mb-8">My focus for the upcoming year is on expanding our institutional reach and elevating the student experience through strategic initiatives.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="animated-card card bg-gray-800 rounded-xl p-6 transition-all duration-300 border border-gray-700 hover:border-blue-500 text-left items-start">
+                        <h3 class="text-2xl font-semibold mb-2 bg-gradient-to-r from-blue-400 to-blue-600">International Collaboration</h3>
+                        <p class="text-gray-400">Emphasize and expand international collaboration with professors and corporate professionals.</p>
+                    </div>
+                    <div class="animated-card card bg-gray-800 rounded-xl p-6 transition-all duration-300 border border-gray-700 hover:border-pink-500 text-left items-start">
+                        <h3 class="text-2xl font-semibold mb-2 bg-gradient-to-r from-pink-400 to-pink-600">Leadership & Workshops</h3>
+                        <p class="text-gray-400">Lead Faculty Development Programs (FDPs) and serve as a core speaker in international workshops.</p>
+                    </div>
+                    <div class="animated-card card bg-gray-800 rounded-xl p-6 transition-all duration-300 border border-gray-700 hover:border-green-500 text-left items-start">
+                        <h3 class="text-2xl font-semibold mb-2 bg-gradient-to-r from-green-400 to-green-600">Research & Publications</h3>
+                        <p class="text-gray-400">Write and publish research papers on key data analytics topics with a goal of contributing to academic knowledge.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // --- Configuration Data ---
+            const chartData = [
+                { label: 'Excel (F)', value: 91.51, color: '#60a5fa' },
+                { label: 'Excel (G)', value: 84.43, color: '#60a5fa' },
+                { label: 'Excel (H)', value: 88.79, color: '#60a5fa' },
+                { label: 'Information Systems (E)', value: 89.48, color: '#f472b6' },
+                { label: 'Information Systems (F)', value: 84.23, color: '#f472b6' },
+                { label: 'Python Tools (C)', value: 84.88, color: '#60a5fa' },
+                { label: 'Python Tools (G)', value: 83.63, color: '#60a5fa' },
+                { label: 'Power BI (E)', value: 91.52, color: '#8b5cf6' },
+                { label: 'Power BI (F)', value: 88.77, color: '#8b5cf6' },
+                { label: 'Power BI (G)', value: 90.20, color: '#8b5cf6' }
+            ];
+
+            // --- DOM Elements & State ---
+            const sections = document.querySelectorAll('.section');
+            let currentSectionIndex = 0;
+            
+            // --- Component Generation ---
+            const createDonutChart = (data) => {
+                const container = document.createElement('div');
+                container.className = 'donut-chart-container';
+                container.innerHTML = `
+                    <svg viewBox="0 0 36 36" class="donut-chart-svg">
+                        <path class="donut-chart-circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                        <path class="donut-chart-circle-fill" data-value="${data.value}" stroke="${data.color}" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" style="stroke-dasharray: ${data.value}, 100;"></path>
+                    </svg>
+                    <div class="donut-chart-text">${data.value}%</div>
+                `;
+                const label = document.createElement('span');
+                label.className = 'chart-label mt-2 text-center text-sm text-gray-300';
+                label.textContent = data.label;
+                
+                const wrapper = document.createElement('div');
+                wrapper.className = 'flex flex-col items-center';
+                wrapper.appendChild(container);
+                wrapper.appendChild(label);
+                
+                return wrapper;
+            };
+
+            // --- Main Execution Block ---
+            const init = () => {
+                const excelContainer = document.getElementById('excel-charts');
+                const isContainer = document.getElementById('is-charts');
+                const pythonContainer = document.getElementById('python-charts');
+                const powerbiContainer = document.getElementById('powerbi-charts');
+
+                // Populate charts from data and place them in the correct groups
+                chartData.forEach(data => {
+                    const chartElement = createDonutChart(data);
+                    if (data.label.startsWith('Excel')) {
+                        excelContainer.appendChild(chartElement);
+                    } else if (data.label.startsWith('Information Systems')) {
+                        isContainer.appendChild(chartElement);
+                    } else if (data.label.startsWith('Python')) {
+                        pythonContainer.appendChild(chartElement);
+                    } else if (data.label.startsWith('Power BI')) {
+                        powerbiContainer.appendChild(chartElement);
+                    }
+                });
+
+                // Use an IntersectionObserver to track the current section
+                const sectionObserver = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            currentSectionIndex = Array.from(sections).indexOf(entry.target);
+                        }
+                    });
+                }, { root: null, rootMargin: '0px', threshold: 0.75 });
+
+                sections.forEach(section => sectionObserver.observe(section));
+            };
+
+            // Run initialization
+            init();
+        });
+    </script>
+</body>
+</html>
